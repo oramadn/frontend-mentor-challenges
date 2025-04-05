@@ -1,11 +1,11 @@
 async function loadComponents() {
   try {
     // Load header
-    const headerRes = await fetch("/05_05_space-tourism-website/components/header.html");
+    const headerRes = await fetch("../components/header.html");
     document.body.insertAdjacentHTML("afterbegin", await headerRes.text());
 
     // Load mobile menu
-    const menuRes = await fetch("/05_05_space-tourism-website/components/mobile-menu.html");
+    const menuRes = await fetch("../components/mobile-menu.html");
     document.body.insertAdjacentHTML("beforeend", await menuRes.text());
 
     // Now initialize menu functionality

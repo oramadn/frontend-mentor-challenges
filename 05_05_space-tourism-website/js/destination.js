@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("/05_05_space-tourism-website/starter-code/data.json");
+  const response = await fetch("../starter-code/data.json");
   const data = await response.json();
   const destinations = data.destinations;
 
