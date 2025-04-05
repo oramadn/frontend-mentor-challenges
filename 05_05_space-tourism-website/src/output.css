@@ -11,8 +11,6 @@
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-xl: 36rem;
-    --container-2xl: 42rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -198,24 +196,6 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-3 {
-    top: calc(var(--spacing) * 3);
-  }
-  .top-\[90\%\] {
-    top: 90%;
-  }
-  .top-\[95\%\] {
-    top: 95%;
-  }
-  .top-\[100\%\] {
-    top: 100%;
-  }
-  .top-\[105\%\] {
-    top: 105%;
-  }
-  .top-\[110\%\] {
-    top: 110%;
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -249,12 +229,6 @@
   .my-auto {
     margin-block: auto;
   }
-  .mt-0 {
-    margin-top: calc(var(--spacing) * 0);
-  }
-  .mt-0\.5 {
-    margin-top: calc(var(--spacing) * 0.5);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -264,20 +238,11 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mb-0 {
-    margin-bottom: calc(var(--spacing) * 0);
-  }
-  .mb-0\.5 {
-    margin-bottom: calc(var(--spacing) * 0.5);
-  }
   .contents {
     display: contents;
   }
   .flex {
     display: flex;
-  }
-  .hidden {
-    display: none;
   }
   .table {
     display: table;
@@ -287,9 +252,6 @@
   }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
-  }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
@@ -321,9 +283,6 @@
   .w-\[70vw\] {
     width: 70vw;
   }
-  .w-\[90\%\] {
-    width: 90%;
-  }
   .w-\[144px\] {
     width: 144px;
   }
@@ -333,14 +292,8 @@
   .w-\[288px\] {
     width: 288px;
   }
-  .w-full {
-    width: 100%;
-  }
   .max-w-\[327px\] {
     max-width: 327px;
-  }
-  .max-w-\[444px\] {
-    max-width: 444px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -407,12 +360,6 @@
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
-  .gap-20 {
-    gap: calc(var(--spacing) * 20);
-  }
-  .gap-60 {
-    gap: calc(var(--spacing) * 60);
-  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -430,14 +377,17 @@
   .border-\[\#53535C\] {
     border-color: #53535C;
   }
-  .border-gray-50 {
-    border-color: var(--color-gray-50);
-  }
   .bg-transparent {
     background-color: transparent;
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-mobile\.jpg\)\] {
+    background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-mobile.jpg);
+  }
+  .bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
   }
   .bg-\[url\(\/assets\/destination\/background-destination-mobile\.jpg\)\] {
     background-image: url(/assets/destination/background-destination-mobile.jpg);
@@ -539,21 +489,9 @@
     --tw-tracking: 2px;
     letter-spacing: 2px;
   }
-  .tracking-\[5\%\] {
-    --tw-tracking: 5%;
-    letter-spacing: 5%;
-  }
   .tracking-\[15\%\] {
     --tw-tracking: 15%;
     letter-spacing: 15%;
-  }
-  .tracking-\[15\] {
-    --tw-tracking: 15;
-    letter-spacing: 15;
-  }
-  .tracking-\[25\%\] {
-    --tw-tracking: 25%;
-    letter-spacing: 25%;
   }
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
@@ -580,9 +518,6 @@
   .opacity-25 {
     opacity: 25%;
   }
-  .opacity-75 {
-    opacity: 75%;
-  }
   .opacity-100 {
     opacity: 100%;
   }
@@ -599,11 +534,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -613,10 +543,6 @@
     transition-property: opacity;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-100 {
-    --tw-duration: 100ms;
-    transition-duration: 100ms;
   }
   .duration-300 {
     --tw-duration: 300ms;
@@ -644,39 +570,14 @@
       }
     }
   }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
+  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-tablet.jpg);
     }
   }
-  .hover\:block {
-    &:hover {
-      @media (hover: hover) {
-        display: block;
-      }
-    }
-  }
-  .hover\:flex {
-    &:hover {
-      @media (hover: hover) {
-        display: flex;
-      }
-    }
-  }
-  .hover\:opacity-75 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 75%;
-      }
-    }
-  }
-  .hover\:opacity-100 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
+  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(/05_05_space-tourism-website/assets/home/background-home-tablet.jpg);
     }
   }
   .md\:bg-\[url\(\/assets\/destination\/background-destination-tablet\.jpg\)\] {
@@ -687,6 +588,16 @@
   .md\:bg-\[url\(\/assets\/home\/background-home-tablet\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(/assets/home/background-home-tablet.jpg);
+    }
+  }
+  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-desktop.jpg);
+    }
+  }
+  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(/05_05_space-tourism-website/assets/home/background-home-desktop.jpg);
     }
   }
   .lg\:bg-\[url\(\/assets\/destination\/background-destination-desktop\.jpg\)\] {
