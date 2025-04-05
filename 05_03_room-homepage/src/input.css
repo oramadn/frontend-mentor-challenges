@@ -1,0 +1,33 @@
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "League Spartan", sans-serif;
+  --color-dark-gray: hsl(0, 0%, 63%);
+  --color-brand-black: hsl(0, 0%, 0%);
+  --color-brand-white: hsl(0, 0%, 100%);
+  --color-very-dark-gray: hsl(0, 0%, 27%);
+}
+
+@layer components {
+  .image-slide {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item {
+    @apply relative text-base tracking-[-0.66px] font-semibold text-brand-white cursor-pointer;
+  }
+
+  .nav-item::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-white transition-all duration-300;
+  }
+
+  .nav-item:hover::after {
+    @apply w-full;
+  }
+}

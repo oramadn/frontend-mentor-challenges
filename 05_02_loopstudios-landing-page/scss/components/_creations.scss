@@ -1,0 +1,210 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+@mixin button-styles {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  font-family: typography.$font-primary;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  color: variables.$color-black;
+  letter-spacing: 5px;
+  border: 1px solid variables.$color-black;
+  padding: 0.8125rem 2rem;
+  cursor: pointer;
+  margin-bottom: 6rem;
+
+  &:hover {
+    color: variables.$color-white;
+    background-color: variables.$color-black;
+  }
+}
+
+.creations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+
+  @media (min-width: 1024px) {
+    padding-inline: 10rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+
+    @media (max-width: 1024px) {
+      align-self: center;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      letter-spacing: 0.1rem;
+    }
+
+    &__button {
+      @include button-styles;
+      margin-bottom: 1rem;
+      display: none;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.875rem;
+    }
+  }
+
+  &__item {
+    height: 120px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 1024px) {
+      height: 450px;
+    }
+
+    h3 {
+      position: absolute;
+      color: variables.$color-white;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: left;
+      top: 50%;
+      left: 5%;
+      z-index: 2;
+
+      @media (min-width: 1024px) {
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 100;
+        top: 80%;
+        left: 10%;
+      }
+    }
+
+    &:hover .creations__overlay {
+      display: block;
+    }
+
+    &:hover h3 {
+      color: variables.$color-black;
+    }
+  }
+
+  &__gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      variables.$color-black,
+      transparent
+    );
+    position: absolute;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  &__overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+
+  &__item--deep-earth {
+    background-image: url("../images/mobile/image-deep-earth.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-deep-earth.jpg");
+    }
+  }
+
+  &__item--night-arcade {
+    background-image: url("../images/mobile/image-night-arcade.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-night-arcade.jpg");
+    }
+  }
+
+  &__item--soccer-team {
+    background-image: url("../images/mobile/image-soccer-team.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-soccer-team.jpg");
+    }
+  }
+
+  &__item--the-grid {
+    background-image: url("../images/mobile/image-grid.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-grid.jpg");
+    }
+  }
+
+  &__item--from-above {
+    background-image: url("../images/mobile/image-from-above.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-from-above.jpg");
+    }
+  }
+
+  &__item--pocket-borealis {
+    background-image: url("../images/mobile/image-pocket-borealis.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-pocket-borealis.jpg");
+    }
+  }
+
+  &__item--the-curiosity {
+    background-image: url("../images/mobile/image-curiosity.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-curiosity.jpg");
+    }
+  }
+
+  &__item--fisheye {
+    background-image: url("../images/mobile/image-fisheye.jpg");
+
+    @media (min-width: 1024px) {
+      background-image: url("../images/desktop/image-fisheye.jpg");
+    }
+  }
+
+  &__button {
+    @include button-styles;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

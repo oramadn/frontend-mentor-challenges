@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --font-rubik: "Rubik", sans-serif;
+  --color-primary: #242a45;
+  --color-secondary: #9295a2;
+  --color-navy-blue: #5267df;
+  --color-red: #fa5959;
+}

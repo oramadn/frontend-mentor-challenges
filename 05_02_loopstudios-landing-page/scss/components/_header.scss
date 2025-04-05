@@ -1,0 +1,76 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+
+  .logo {
+    width: 144px;
+    height: 1.5rem;
+  }
+
+  .menu__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .menu-icon {
+      width: 1.5rem;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+    flex-direction: row;
+    gap: 2rem;
+
+    p {
+      font-family: typography.$font-primary;
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 600;
+      color: variables.$color-white;
+      opacity: 1;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: variables.$color-white;
+        transition: width 0.3s ease;
+      }
+  
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 10rem;
+  }
+}

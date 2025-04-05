@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./dist/styles.css" rel="stylesheet">
+    <title>Room homepage</title>
+  </head>
+
+  <body class="relative flex flex-col min-h-screen">
+    <!-- Overlay (hidden by default) -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black opacity-40 hidden z-40"
+    ></div>
+
+    <!-- Sliding Menu -->
+    <div
+      id="menu"
+      class="fixed top-0 left-0 w-full h-[13vh] bg-white shadow-md transform -translate-y-full transition-transform duration-300 ease-in-out flex items-center z-60 px-6"
+    >
+      <div class="flex-grow-[2]">
+        <img
+          id="close-menu"
+          src="./images/icon-close.svg"
+          alt="Close icon"
+          class="cursor-pointer h-3.5 w-auto"
+        />
+      </div>
+      <nav
+        class="flex-grow flex justify-end space-x-6 font-primary text-brand-black text-base tracking-[-0.6px] font-medium"
+      >
+        <a href="#">home</a>
+        <a href="#">shop</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row w-full md:h-[66vh]">
+      <!-- Image Slider -->
+      <div
+        class="relative flex-shrink-0 w-full md:w-1/2 h-[50vh] md:h-full overflow-hidden"
+      >
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out w-full h-full"
+        >
+          <div class="image-slide flex-shrink-0 w-full h-full">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./images/mobile-image-hero-1.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/desktop-image-hero-1.jpg"
+              />
+              <img
+                src="./images/mobile-image-hero-1.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+          <div class="image-slide flex-shrink-0 w-full h-full">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./images/mobile-image-hero-2.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/desktop-image-hero-2.jpg"
+              />
+              <img
+                src="./images/mobile-image-hero-2.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+          <div class="image-slide flex-shrink-0 w-full h-full">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./images/mobile-image-hero-3.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/desktop-image-hero-3.jpg"
+              />
+              <img
+                src="./images/mobile-image-hero-3.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="absolute top-0 left-0 w-full flex flex-row px-8 py-12 md:px-16 md:py-16">
+          <img
+            id="menu-button"
+            src="./images/icon-hamburger.svg"
+            alt="Hamburger icon"
+            class="cursor-pointer z-50 md:hidden absolute left-8 top-12"
+          />
+          
+          <div class="flex flex-row items-center justify-center w-full md:justify-start">
+            <div class="flex">
+              <img src="./images/logo.svg" alt="Logo" />
+            </div>
+            
+            <div class="hidden md:flex flex-row gap-8 font-primary text-brand-white ml-14">
+              <p class="nav-item">home</p>
+              <p class="nav-item">shop</p>
+              <p class="nav-item">about</p>
+              <p class="nav-item">contact</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows for navigation (Bottom Right of Image) -->
+        <div class="absolute bottom-0 right-0 flex md:hidden h-14">
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer left-arrow"
+          >
+            <img
+              src="./images/icon-angle-left.svg"
+              alt="Arrow left"
+              class="w-auto h-5.5"
+            />
+          </div>
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer right-arrow"
+          >
+            <img
+              src="./images/icon-angle-right.svg"
+              alt="Arrow right"
+              class="w-auto h-5.5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Section -->
+      <div
+        class="flex-1 px-8 py-12 md:px-[100px] md:py-16 relative flex flex-col justify-center"
+      >
+        <div class="max-w-[450px] mx-auto w-full">
+          <h1
+            class="font-primary font-medium md:font-semibold text-4xl md:text-5xl tracking-[-1.5px] md:tracking-[-2px] mb-3"
+          >
+            Discover innovative ways to decorate
+          </h1>
+          <p class="font-primary font-normal text-base text-dark-gray mb-9">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <div
+            class="flex flex-row justify-start gap-7 align-middle transition-opacity ease-in hover:opacity-25"
+          >
+            <p
+              class="font-primary font-medium text-base tracking-[12.5px] cursor-pointer"
+            >
+              SHOP NOW
+            </p>
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Arrow pointing to the right"
+              class="object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Arrows for navigation (Bottom Left of Text Section) -->
+        <div class="absolute bottom-0 left-0 hidden md:flex h-14">
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer left-arrow transition-opacity ease-in hover:opacity-60"
+          >
+            <img
+              src="./images/icon-angle-left.svg"
+              alt="Arrow left"
+              class="w-auto h-5.5"
+            />
+          </div>
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer right-arrow transition-opacity ease-in hover:opacity-60"
+          >
+            <img
+              src="./images/icon-angle-right.svg"
+              alt="Arrow right"
+              class="w-auto h-5.5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row">
+      <picture class="flex-shrink-0">
+        <img src="./images/image-about-dark.jpg" alt="" />
+      </picture>
+      <div class="px-8 md:px-12 py-10.5">
+        <h2
+          class="font-primary font-bold text-sm md:text-lg tracking-[5.8px] mb-3 md:mt-4"
+        >
+          ABOUT OUR FURNITURE
+        </h2>
+        <p class="font-primary font-normal text-dark-gray text-base/normal">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </div>
+      <picture class="flex-shrink-0">
+        <img src="./images/image-about-light.jpg" alt="" />
+      </picture>
+    </section>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/hero_catalog.js"></script>
+  </body>
+</html>

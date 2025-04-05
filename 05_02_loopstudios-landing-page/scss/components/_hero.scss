@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 100vh;
+  background-image: url("../images/mobile/image-hero.jpg");
+  position: relative;
+
+  @media (min-width: 1024px) {
+    max-height: 650px;
+    background-image: url("../images/desktop/image-hero.jpg");
+    align-items: flex-start;
+    padding-inline: 10rem;
+  }
+
+  &__immersive-box {
+    display: flex;
+    border: 2px solid variables.$color-white;
+    padding: 26px 24px 24px 24px;
+    width: 80%;
+    max-width: 600px;
+
+    h1 {
+      color: variables.$color-white;
+      text-align: left;
+
+      @media (min-width: 1024px) {
+        font-size: 72px;
+        line-height: 70px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 650px;
+      margin-left: 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}

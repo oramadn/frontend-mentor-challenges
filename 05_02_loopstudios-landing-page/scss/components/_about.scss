@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  padding: 6rem 1.5rem 6rem 1.5rem;
+  text-align: center;
+
+  &__vr {
+    padding: 3rem 1.5rem 0 1.5rem;
+
+    p {
+      margin-top: 1rem;
+    }
+
+    h2 {
+      @media (min-width: 1024px) {
+        font-size: 48px;
+        line-height: 48px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      position: absolute;
+      background-color: white;
+      max-width: 540px;
+      max-height: 315px;
+      left: 50%;
+      top: 39%;
+      padding: 5rem 3.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 11.5rem;
+    flex-direction: row;
+  }
+}
