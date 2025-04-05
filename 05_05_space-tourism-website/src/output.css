@@ -201,21 +201,6 @@
   .top-3 {
     top: calc(var(--spacing) * 3);
   }
-  .top-\[90\%\] {
-    top: 90%;
-  }
-  .top-\[95\%\] {
-    top: 95%;
-  }
-  .top-\[100\%\] {
-    top: 100%;
-  }
-  .top-\[105\%\] {
-    top: 105%;
-  }
-  .top-\[110\%\] {
-    top: 110%;
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -252,9 +237,6 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
-  .mt-0\.5 {
-    margin-top: calc(var(--spacing) * 0.5);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -266,9 +248,6 @@
   }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
-  }
-  .mb-0\.5 {
-    margin-bottom: calc(var(--spacing) * 0.5);
   }
   .contents {
     display: contents;
@@ -321,9 +300,6 @@
   .w-\[70vw\] {
     width: 70vw;
   }
-  .w-\[90\%\] {
-    width: 90%;
-  }
   .w-\[144px\] {
     width: 144px;
   }
@@ -338,9 +314,6 @@
   }
   .max-w-\[327px\] {
     max-width: 327px;
-  }
-  .max-w-\[444px\] {
-    max-width: 444px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -438,6 +411,12 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-mobile\.jpg\)\] {
+    background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-mobile.jpg);
+  }
+  .bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
   }
   .bg-\[url\(\/assets\/destination\/background-destination-mobile\.jpg\)\] {
     background-image: url(/assets/destination/background-destination-mobile.jpg);
@@ -539,21 +518,9 @@
     --tw-tracking: 2px;
     letter-spacing: 2px;
   }
-  .tracking-\[5\%\] {
-    --tw-tracking: 5%;
-    letter-spacing: 5%;
-  }
   .tracking-\[15\%\] {
     --tw-tracking: 15%;
     letter-spacing: 15%;
-  }
-  .tracking-\[15\] {
-    --tw-tracking: 15;
-    letter-spacing: 15;
-  }
-  .tracking-\[25\%\] {
-    --tw-tracking: 25%;
-    letter-spacing: 25%;
   }
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
@@ -644,39 +611,14 @@
       }
     }
   }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
+  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-tablet.jpg);
     }
   }
-  .hover\:block {
-    &:hover {
-      @media (hover: hover) {
-        display: block;
-      }
-    }
-  }
-  .hover\:flex {
-    &:hover {
-      @media (hover: hover) {
-        display: flex;
-      }
-    }
-  }
-  .hover\:opacity-75 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 75%;
-      }
-    }
-  }
-  .hover\:opacity-100 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
+  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(/05_05_space-tourism-website/assets/home/background-home-tablet.jpg);
     }
   }
   .md\:bg-\[url\(\/assets\/destination\/background-destination-tablet\.jpg\)\] {
@@ -687,6 +629,16 @@
   .md\:bg-\[url\(\/assets\/home\/background-home-tablet\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(/assets/home/background-home-tablet.jpg);
+    }
+  }
+  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-desktop.jpg);
+    }
+  }
+  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(/05_05_space-tourism-website/assets/home/background-home-desktop.jpg);
     }
   }
   .lg\:bg-\[url\(\/assets\/destination\/background-destination-desktop\.jpg\)\] {
