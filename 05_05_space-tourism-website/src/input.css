@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-barlow: "Barlow Condensed", sans-serif;
+  --font-barlow-condensed: "Barlow", sans-serif;
+  --font-bellefair: "Bellefair", sans-serif;
+  --color-primary: #ffffff;
+  --color-secondary: #d0d6f9;
+  --color-blue-900: #0b0d17;
+}

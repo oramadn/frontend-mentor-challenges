@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./src/output.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
+    <title>Bookmark landing page</title>
+  </head>
+
+  <body class="flex flex-col mx-8 md:mx-56">
+    <div id="hero" class="h-screen md:h-fit relative overflow-clip md:mb-26">
+      <header class="flex flex-row justify-between my-10 items-center md:my-12">
+        <img src="./images/logo-bookmark.svg" alt="Bookmark logo" />
+        <nav>
+          <img class="cursor-pointer md:hidden" src="./images/icon-hamburger.svg" alt="Hamburger icon" />
+        </nav>
+        <nav class="hidden flex-row gap-11 items-center md:flex">
+          <a class="font-rubik text-primary text-sm leading-4 tracking-[1.5px] hover:text-red" href="#"
+            >FEATURES</a
+          >
+          <a class="font-rubik text-primary text-sm leading-4 tracking-[1.5px] hover:text-red" href="#"
+            >PRICING</a
+          >
+          <a class="font-rubik text-primary text-sm leading-4 tracking-[1.5px] hover:text-red" href="#"
+            >CONTACT</a
+          >
+          <a
+            class="font-rubik text-white text-sm leading-4 tracking-[1.5px] bg-red py-3 px-6 rounded-md border-2 font-medium hover:bg-transparent hover:border-red hover:text-red"
+            href="#"
+            >LOGIN</a
+          >
+        </nav>
+      </header>
+
+      <div class="flex flex-col md:flex-row-reverse md:mt-25">
+        <div class="relative w-fit items-center flex-1">
+          <img src="./images/illustration-hero.svg" class="relative z-10 h-[210px] w-full md:h-full" />
+          <div
+            class="absolute top-8 md:top-34 left-0 md:left-20 h-[180px] md:h-[220px] w-[450px] md:w-[500px] bg-navy-blue rounded-full transform translate-x-8"
+          ></div>
+        </div>
+        <div class="mt-12 flex-1">
+          <h1
+            class="font-rubik text-3xl md:text-5xl leading-10 md:leading-13 font-medium text-center text-primary md:text-left md:w-md"
+          >
+            A Simple Bookmark Manager
+          </h1>
+          <p class="font-rubik text-secondary text-center text-[15px] md:text-lg mt-4 mb-8 md:text-left">
+            A clean and simple interface to organize your favourite websites. Open a new browser tab and see
+            your sites load instantly. Try it for free.
+          </p>
+          <div class="flex flex-row items-center text-center md:justify-start md:gap-4">
+            <div
+              class="flex-1 font-rubik text-sm leading-12 text-white font-medium rounded-md border-2 bg-navy-blue cursor-pointer hover:bg-transparent hover:border-navy-blue hover:text-navy-blue md:flex-none md:px-5"
+            >
+              Get it on Chrome
+            </div>
+            <div
+              class="flex-1 font-rubik text-sm leading-12 text-[#595D72] border-2 rounded-md border-transparent font-medium cursor-pointer hover:border-[#595D72] md:flex-none px-5"
+            >
+              Get it on Firefox
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-0 w-full h-screen bg-primary bg-opacity-80 transform translate-x-full transition-transform duration-300 ease-in-out z-50 overflow-hidden"
+    >
+      <div class="flex flex-col h-full">
+        <div class="flex justify-between items-center p-8">
+          <img src="./images/logo-bookmark.svg" alt="Bookmark logo" class="invert" />
+          <img id="close-menu" src="./images/icon-close.svg" alt="" class="cursor-pointer" />
+        </div>
+        <div class="flex-1 flex flex-col items-center mt-4">
+          <a href="#" class="font-rubik text-white text-xl border-t border-gray-500 w-4/5 py-5 text-center"
+            >FEATURES</a
+          >
+          <a href="#" class="font-rubik text-white text-xl border-t border-gray-500 w-4/5 py-5 text-center"
+            >PRICING</a
+          >
+          <a
+            href="#"
+            class="font-rubik text-white text-xl border-t border-b border-gray-500 w-4/5 py-5 text-center"
+            >CONTACT</a
+          >
+          <a
+            href="#"
+            class="font-rubik text-white text-xl rounded-sm border-[1.5px] border-white w-4/5 py-2.5 text-center mt-6"
+            >LOGIN</a
+          >
+        </div>
+        <div class="flex justify-center mt-8">
+          <div class="flex flex-row gap-10 mb-12">
+            <img src="./images/icon-facebook.svg" alt="Icon of Facebook" />
+            <img src="./images/icon-twitter.svg" alt="Icon of Twitter" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="features" class="text-center">
+      <div class="mb-8">
+        <h2 class="font-rubik text-primary font-medium leading-13 text-2xl md:text-[32px]">Features</h2>
+        <p class="font-rubik text-secondary leading-6 mx-auto text-[15px] md:text-lg md:w-[540px]">
+          Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync
+          between your devices so you can access them on the go.
+        </p>
+      </div>
+      <div class="flex flex-col md:flex-row md:justify-between md:mx-50 font-rubik text-base leading-4 mb-8">
+        <div class="tab-group">
+          <div class="border-t border-gray-300 md:hidden"></div>
+          <button
+            class="font-rubik tab-button relative w-full py-4 md:py-6 text-primary cursor-pointer hover:text-red"
+            data-tab="tab1"
+          >
+            Simple Bookmarking
+            <div
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[45%] md:w-[110%] h-[3px] bg-orange-500 transition-all duration-300 origin-center"
+            ></div>
+          </button>
+          <div class="border-b border-gray-300 md:hidden"></div>
+        </div>
+
+        <div class="tab-group">
+          <button
+            class="font-rubik tab-button relative w-full py-4 md:py-6 text-gray-500 cursor-pointer hover:text-red"
+            data-tab="tab2"
+          >
+            Speedy Searching
+            <div
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[45%] md:w-[110%] h-[3px] bg-transparent transition-all duration-300 origin-center"
+            ></div>
+          </button>
+          <div class="border-b border-gray-300 md:hidden"></div>
+        </div>
+
+        <div class="tab-group">
+          <button
+            class="font-rubik tab-button relative w-full py-4 md:py-6 text-gray-500 cursor-pointer hover:text-red"
+            data-tab="tab3"
+          >
+            Easy Sharing
+            <div
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[45%] md:w-[110%] h-[3px] bg-transparent transition-all duration-300 origin-center"
+            ></div>
+          </button>
+          <div class="border-b border-gray-300 md:hidden"></div>
+        </div>
+      </div>
+
+      <div
+        class="tab-content p-4 w-full flex flex-col md:flex-row justify-center items-center md:gap-30"
+        id="tab1"
+      >
+        <div class="relative">
+          <img
+            src="./images/illustration-features-tab-1.svg"
+            alt=""
+            class="relative z-10 h-[200px] md:h-full"
+          />
+          <div
+            class="absolute top-16 md:top-26 -left-45 md:-left-130 h-[180px] md:h-[280px] w-[450px] md:w-[800px] bg-navy-blue rounded-full -z-10"
+          ></div>
+        </div>
+
+        <div class="flex flex-col mt-16 md:mt-0 md:text-left">
+          <h2 class="font-rubik text-primary text-2xl leading-13 font-medium tracking-tight">
+            Bookmark in one click
+          </h2>
+          <p class="font-rubik text-secondary text-base leading-6 md:w-sm">
+            Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
+            control over how you manage your favourite sites.
+          </p>
+          <div
+            class="hidden font-rubik w-fit px-5 py-3 bg-navy-blue text-white rounded-md font-medium text-sm cursor-pointer mt-10 md:flex"
+          >
+            More Info
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-content hidden p-4 w-full flex-col md:flex-row justify-center items-center md:gap-30"
+        id="tab2"
+      >
+        <div class="relative">
+          <img
+            src="./images/illustration-features-tab-2.svg"
+            alt=""
+            class="relative z-10 h-[200px] md:h-full md:max-h-[305px]"
+          />
+          <div
+            class="absolute top-16 md:top-26 -left-45 md:-left-130 h-[180px] md:h-[280px] w-[450px] md:w-[800px] bg-navy-blue rounded-full -z-10"
+          ></div>
+        </div>
+
+        <div class="flex flex-col mt-16 md:mt-0 md:text-left">
+          <h2 class="font-rubik text-primary text-2xl leading-13 font-medium tracking-tight">
+            Intelligent search
+          </h2>
+          <p class="font-rubik text-secondary text-base leading-6 md:w-sm">
+            Our powerful search feature will help you find saved sites in no time at all. No need to trawl
+            through all of your bookmarks.
+          </p>
+          <div
+            class="hidden font-rubik w-fit px-5 py-3 bg-navy-blue text-white rounded-md font-medium text-sm cursor-pointer mt-10 md:flex"
+          >
+            More Info
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-content hidden p-4 w-full flex-col md:flex-row justify-center items-center md:gap-30"
+        id="tab3"
+      >
+        <div class="relative">
+          <img
+            src="./images/illustration-features-tab-3.svg"
+            alt=""
+            class="relative z-10 h-[200px] md:h-full md:max-h-[305px]"
+          />
+          <div
+            class="absolute top-16 md:top-26 -left-45 md:-left-130 h-[180px] md:h-[280px] w-[450px] md:w-[800px] bg-navy-blue rounded-full -z-10"
+          ></div>
+        </div>
+        <div class="flex flex-col mt-16 md:mt-0 justify-center items-center md:text-left">
+          <h2 class="font-rubik text-primary text-2xl leading-13 font-medium tracking-tight">
+            Share your bookmarks easily
+          </h2>
+          <p class="font-rubik text-secondary text-base leading-6 md:w-sm">
+            share your bookmarks and collections with others. Create a shareable link that you can send at the
+            click of a button.
+          </p>
+          <div
+            class="hidden font-rubik w-fit px-5 py-3 bg-navy-blue text-white rounded-md font-medium text-sm cursor-pointer mt-10 md:flex"
+          >
+            More Info
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="font-rubik w-fit px-5 py-3 bg-navy-blue text-white rounded-md font-medium text-sm cursor-pointer md:hidden"
+        >
+          More Info
+        </div>
+      </div>
+    </div>
+
+    <div id="Downloads" class="text-center mt-16 md:mt-28 mb-26">
+      <div class="flex flex-col items-center mb-24 md:mb-0">
+        <h2 class="font-rubik text-primary text-2xl py-5 font-medium">Download the extension</h2>
+        <p class="font-rubik text-secondary text-base md:w-lg">
+          We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like
+          us to prioritize.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center items-center mt-16 md:mt-0 gap-24">
+        <div>
+          <img src="./images/logo-chrome.svg" alt="" class="mx-auto" />
+          <h3 class="font-rubik text-primary font-medium text-xl mt-6">Add to Chrome</h3>
+          <p class="font-rubik text-secondary text-base leading-7">Minimum version 62</p>
+          <div
+            class="w-fit px-6 py-3 mt-8 bg-navy-blue hover:bg-transparent text-white hover:text-navy-blue border-2 rounded-md font-medium text-sm cursor-pointer"
+          >
+            Add & Install Extension
+          </div>
+        </div>
+
+        <div class="mt-0 md:mt-16">
+          <img src="./images/logo-firefox.svg" alt="" class="mx-auto" />
+          <h3 class="font-rubik text-primary font-medium text-xl mt-6">Add to Firefox</h3>
+          <p class="font-rubik text-secondary text-base leading-7">Minimum version 55</p>
+          <div
+            class="w-fit px-6 py-3 mt-8 bg-navy-blue hover:bg-transparent text-white hover:text-navy-blue border-2 rounded-md font-medium text-sm cursor-pointer"
+          >
+            Add & Install Extension
+          </div>
+        </div>
+
+        <div class="mt-0 md:mt-32">
+          <img src="./images/logo-opera.svg" alt="" class="mx-auto" />
+          <h3 class="font-rubik text-primary font-medium text-xl mt-6">Add to Opera</h3>
+          <p class="font-rubik text-secondary text-base leading-7">Minimum version 46</p>
+          <div
+            class="w-fit px-6 py-3 mt-8 bg-navy-blue hover:bg-transparent text-white hover:text-navy-blue border-2 rounded-md font-medium text-sm cursor-pointer"
+          >
+            Add & Install Extension
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="FAQs" class="self-center text-center mb-20 md:w-[540px]">
+      <div class="flex flex-col justify-center items-center gap-4 mb-14">
+        <h2
+          class="font-rubik text-primary font-medium text-2xl md:text-[32px] leading-7.5 text-wrap w-[200px] md:w-fit"
+        >
+          Frquently Asked Questions
+        </h2>
+        <p class="font-rubik text-secondary text-base leading-6">
+          Here are some of our FAQs. If you have any other questions you’d like answered please feel free to
+          email us.
+        </p>
+      </div>
+      <div class="flex flex-col gap-8">
+        <div class="accordion-item border-b border-gray-300 pb-4">
+          <div class="flex flex-row justify-between items-center cursor-pointer">
+            <p class="font-rubik text-primary hover:text-red leading-8 text-[15px] md:text-lg">
+              What is Bookmark?
+            </p>
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Icon of an arrow"
+              class="accordion-icon transition-transform duration-300"
+            />
+          </div>
+          <div class="accordion-content mt-4 hidden">
+            <p class="font-rubik text-secondary text-[15px] text-left leading-6 pb-4">
+              Bookmark is a clean and simple interface to organize your favourite websites. Open a new browser
+              tab and see your sites load instantly. Try it for free.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 pb-4">
+          <div class="flex flex-row justify-between items-center cursor-pointer">
+            <p class="font-rubik text-primary hover:text-red leading-8 text-[15px] md:text-lg">
+              How can I request a new browser?
+            </p>
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Icon of an arrow"
+              class="accordion-icon transition-transform duration-300"
+            />
+          </div>
+          <div class="accordion-content mt-4 hidden">
+            <p class="font-rubik text-secondary text-[15px] text-left leading-6 pb-4">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+              ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 pb-4">
+          <div class="flex flex-row justify-between items-center cursor-pointer">
+            <p class="font-rubik text-primary hover:text-red leading-8 text-[15px] md:text-lg">
+              Is there a mobile app?
+            </p>
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Icon of an arrow"
+              class="accordion-icon transition-transform duration-300"
+            />
+          </div>
+          <div class="accordion-content mt-4 hidden">
+            <p class="font-rubik text-secondary text-[15px] text-left leading-6 pb-4">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+              condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra
+              purus. Sed sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 pb-4">
+          <div class="flex flex-row justify-between items-center cursor-pointer">
+            <p class="font-rubik text-primary hover:text-red leading-8 text-[15px] md:text-lg">
+              What about other Chromium browsers?
+            </p>
+            <img
+              src="./images/icon-arrow.svg"
+              alt="Icon of an arrow"
+              class="accordion-icon transition-transform duration-300"
+            />
+          </div>
+          <div class="accordion-content mt-4 hidden">
+            <p class="font-rubik text-secondary text-[15px] text-left leading-6 pb-4">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+              vitae neque eget nisl gravida pellentesque non ut velit.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="font-rubik w-fit px-5 py-3 bg-navy-blue hover:bg-transparent text-white hover:text-navy-blue rounded-md border-2 font-medium text-sm cursor-pointer self-center mt-2"
+        >
+          More Info
+        </div>
+      </div>
+    </div>
+
+    <footer class="flex flex-col h-screen md:h-fit md:-mx-48">
+      <div class="flex-1 bg-navy-blue flex flex-col items-center justify-center -mx-8 md:p-14">
+        <div class="text-center flex-1 mx-8 mt-10 md:mb-14">
+          <p class="font-rubik text-white text-[12px] leading-10 tracking-[4.62px] font-medium">
+            35,000+ ALREADY JOINED
+          </p>
+          <p
+            class="font-rubik text-white text-2xl md:text-[32px] leading-7 md:leading-10 tracking-tight font-medium text-wrap w-[300px] md:w-[400px]"
+          >
+            Stay up-to-date with what we’re doing
+          </p>
+        </div>
+        <div class="w-full md:w-sm flex-1 flex flex-col md:flex-row gap-4 -mt-8 mx-8">
+          <div
+            class="h-12 flex mx-12 md:mx-0 md:flex-[2] items-center justify-start px-4 rounded-md bg-white font-rubik text-secondary text-md leading-7 tracking-wide"
+          >
+            Enter your email address
+          </div>
+          <div
+            class="h-12 flex mx-12 md:mx-0 md:flex-[1] items-center justify-center rounded-md border-2 border-red bg-red hover:bg-white font-rubik text-white hover:text-red font-medium leading-7 text-sm text-center cursor-pointer"
+          >
+            Contact Us
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 bg-primary -mx-8">
+        <div class="flex flex-col md:flex-row justify-between items-center py-10 md:py-6 md:mx-32">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <img src="./images/logo-bookmark.svg" alt="Bookmark logo" class="mb-4 md:mb-0 invert" />
+
+            <p
+              class="font-rubik text-white hover:text-red text-base md:text-[13px] leading-4 tracking-[1.73px] cursor-pointer"
+            >
+              FEATURES
+            </p>
+            <p
+              class="font-rubik text-white hover:text-red text-base md:text-[13px] leading-4 tracking-[1.73px] cursor-pointer"
+            >
+              PRICING
+            </p>
+            <p
+              class="font-rubik text-white hover:text-red text-base md:text-[13px] leading-4 tracking-[1.73px] cursor-pointer"
+            >
+              CONTACTS
+            </p>
+          </div>
+
+          <div class="flex flex-row gap-10 mt-16 md:mt-0">
+            <img src="./images/icon-facebook.svg" alt="Icon of Facebook" class="cursor-pointer" />
+            <img src="./images/icon-twitter.svg" alt="Icon of Twitter" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/toggle-features.js"></script>
+    <script src="../js/toggle-side-menu.js"></script>
+    <script src="../js/accordion.js"></script>
+  </body>
+</html>

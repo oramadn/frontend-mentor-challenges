@@ -1,0 +1,51 @@
+@use '../abstracts/variables';
+@use '../base/typography';
+
+.menu {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: variables.$color-black;
+    color: variables.$color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 5;
+    transition: right 0.3s ease;
+    
+    &.menu--active {
+      right: 0;
+    }
+  }
+  
+  &__nav {
+    ul {
+      list-style: none;
+      margin-left: 1.5rem;
+      font-family: typography.$font-secondary;
+      font-size: 24px;
+      line-height: 25px;
+      font-weight: lighter;
+
+      li {
+        margin: 1.5rem 0;
+
+        a {
+          color: variables.$color-white;
+          font-size: 1.5rem;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: variables.$color-dark-gray;
+          }
+        }
+      }
+    }
+  }
+}
