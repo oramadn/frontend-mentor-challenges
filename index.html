@@ -2,11 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor Projects</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: "Inter", system-ui, sans-serif;
+        background: radial-gradient(ellipse at top, #0f172a 0%, #020617 100%);
+        color: #cbd5e1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #f8fafc;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: 1rem;
+        max-width: 420px;
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        padding: 1rem 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        text-decoration: none;
+        color: #93c5fd;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(2px);
+      }
+
+      a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #e0f2fe;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      footer {
+        margin-top: auto;
+        font-size: 0.8rem;
+        color: #64748b;
+        margin-top: 3rem;
+      }
+    </style>
   </head>
   <body>
     <h1>Frontend Mentor Projects</h1>
+
     <ul>
       <li><a href="02_01_product-preview-component/">Product Preview Component</a></li>
       <li><a href="02_02_four-card-feature-section/">Four Card Feature Section</a></li>
@@ -16,7 +72,8 @@
       <li><a href="05_02_loopstudios-landing-page/">Loopstudios Landing Page</a></li>
       <li><a href="05_03_room-homepage/">Room Homepage</a></li>
       <li><a href="05_04_bookmark-landing-page/">Bookmark Landing Page</a></li>
-      <li><a href="05_05_space-tourism-website/">Space Tourism Website</a></li>
     </ul>
+
+    <footer>&copy; oramadn — Frontend Mentor Challenges</footer>
   </body>
 </html>
