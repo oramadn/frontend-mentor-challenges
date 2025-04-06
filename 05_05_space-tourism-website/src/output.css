@@ -191,6 +191,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -202,6 +205,9 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -241,6 +247,9 @@
   }
   .table {
     display: table;
+  }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
   }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
@@ -287,12 +296,23 @@
   .max-w-\[327px\] {
     max-width: 327px;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-x-full {
     --tw-translate-x: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -304,6 +324,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -344,6 +367,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-t-1 {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
@@ -363,6 +390,9 @@
   .bg-\[url\(\'\.\/assets\/home\/background-home-mobile\.jpg\'\)\] {
     background-image: url('./assets/home/background-home-mobile.jpg');
   }
+  .bg-\[url\(\.\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(./05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  }
   .bg-\[url\(\.\/assets\/home\/background-home-mobile\.jpg\)\] {
     background-image: url(./assets/home/background-home-mobile.jpg);
   }
@@ -380,6 +410,21 @@
   }
   .bg-\[url\(\/assets\/home\/background-home-mobile\.jpg\)\] {
     background-image: url(/assets/home/background-home-mobile.jpg);
+  }
+  .bg-\[url\(\/front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(/front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  }
+  .bg-\[url\(\/frontend\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(/frontend/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  }
+  .bg-\[url\(\/frontend_mentor_challenges\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(/frontend_mentor_challenges/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  }
+  .bg-\[url\(assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(assets/home/background-home-mobile.jpg);
+  }
+  .bg-\[url\(front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
   }
   .bg-cover {
     background-size: cover;
@@ -516,6 +561,10 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -577,6 +626,11 @@
       background-image: url(/assets/destination/background-destination-tablet.jpg);
     }
   }
+  .md\:bg-\[url\(assets\/home\/background-home-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(assets/home/background-home-tablet.jpg);
+    }
+  }
   .lg\:bg-\[url\(\.\/assets\/home\/background-home-desktop\.jpg\)\] {
     @media (width >= 64rem) {
       background-image: url(./assets/home/background-home-desktop.jpg);
@@ -600,6 +654,11 @@
   .lg\:bg-\[url\(\/assets\/destination\/background-destination-desktop\.jpg\)\] {
     @media (width >= 64rem) {
       background-image: url(/assets/destination/background-destination-desktop.jpg);
+    }
+  }
+  .lg\:bg-\[url\(assets\/home\/background-home-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(assets/home/background-home-desktop.jpg);
     }
   }
 }
