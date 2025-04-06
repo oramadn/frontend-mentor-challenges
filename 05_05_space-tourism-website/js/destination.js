@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const navItems = document.querySelectorAll(".nav-item");
   const destinationImage = document.getElementById("destination-image");
   const destinationTitle = document.getElementById("destination-title");
-  const destinationDescription = document.getElementById("destination-description");
+  const destinationDescription = document.getElementById(
+    "destination-description"
+  );
   const destinationDistance = document.getElementById("destination-distance");
   const destinationTravel = document.getElementById("destination-travel");
 
@@ -22,7 +24,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   function updateDestination(destinationName) {
-    const destination = destinations.find((d) => d.name.toLowerCase() === destinationName);
+    const destination = destinations.find(
+      (d) => d.name.toLowerCase() === destinationName
+    );
 
     // Fade out content
     destinationImage.style.opacity = "0";
@@ -33,7 +37,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Update content after fade out
     setTimeout(() => {
-      destinationImage.src = destination.images.png.replace("../assests", "./assets");
+      destinationImage.src = destination.images.png
+        .replace("../assests", "./src/assets")
+        .replace(".png", ".webp");
       destinationTitle.textContent = destination.name;
       destinationDescription.textContent = destination.description;
       destinationDistance.textContent = destination.distance;
