@@ -381,18 +381,6 @@
   .bg-\[url\(\/assets\/home\/background-home-mobile\.jpg\)\] {
     background-image: url(/assets/home/background-home-mobile.jpg);
   }
-  .bg-\[url\(\/front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/frontend\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/frontend/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/frontend_mentor_challenges\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/frontend_mentor_challenges/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
   .bg-cover {
     background-size: cover;
   }
