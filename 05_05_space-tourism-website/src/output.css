@@ -9,7 +9,7 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-900: #0b0d17;
-    --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -18,8 +18,11 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
     --leading-normal: 1.5;
     --blur-lg: 16px;
     --default-transition-duration: 150ms;
@@ -191,23 +194,23 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .right-100 {
+    right: calc(var(--spacing) * 100);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
+  .bottom-10 {
+    bottom: calc(var(--spacing) * 10);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -239,6 +242,18 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
   .contents {
     display: contents;
   }
@@ -248,20 +263,32 @@
   .table {
     display: table;
   }
-  .h-0 {
-    height: calc(var(--spacing) * 0);
-  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-\[10px\] {
+    height: 10px;
+  }
   .h-\[144px\] {
     height: 144px;
   }
+  .h-\[160px\] {
+    height: 160px;
+  }
   .h-\[288px\] {
     height: 288px;
+  }
+  .h-\[340px\] {
+    height: 340px;
   }
   .h-full {
     height: 100%;
@@ -272,6 +299,9 @@
   .min-h-\[135px\] {
     min-height: 135px;
   }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
@@ -280,6 +310,9 @@
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+  .w-\[10px\] {
+    width: 10px;
   }
   .w-\[70vw\] {
     width: 70vw;
@@ -293,15 +326,14 @@
   .w-\[288px\] {
     width: 288px;
   }
+  .w-full {
+    width: 100%;
+  }
   .max-w-\[327px\] {
     max-width: 327px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
+  .flex-grow {
+    flex-grow: 1;
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -309,10 +341,6 @@
   }
   .translate-x-full {
     --tw-translate-x: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -324,9 +352,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -358,18 +383,26 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
+  .self-center {
+    align-self: center;
   }
   .overflow-hidden {
     overflow: hidden;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-t-1 {
     border-top-style: var(--tw-border-style);
@@ -378,68 +411,39 @@
   .border-\[\#53535C\] {
     border-color: #53535C;
   }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
-  }
   .bg-transparent {
     background-color: transparent;
   }
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\'\.\/assets\/home\/background-home-mobile\.jpg\'\)\] {
-    background-image: url('./assets/home/background-home-mobile.jpg');
+  .bg-gradient-to-t {
+    --tw-gradient-position: to top in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\.\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(./05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  .bg-\[url\(\.\/assets\/crew\/background-crew-mobile\.jpg\)\] {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
   }
   .bg-\[url\(\.\/assets\/destination\/background-destination-mobile\.jpg\)\] {
     background-image: url(./assets/destination/background-destination-mobile.jpg);
   }
-  .bg-\[url\(\.\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(./assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\.\/src\/assets\/destination\/background-destination-mobile\.jpg\)\] {
-    background-image: url(./src/assets/destination/background-destination-mobile.jpg);
-  }
-  .bg-\[url\(\.\/src\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(./src/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-mobile\.jpg\)\] {
-    background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-mobile.jpg);
-  }
-  .bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/assets\/destination\/background-destination-mobile\.jpg\)\] {
-    background-image: url(/assets/destination/background-destination-mobile.jpg);
-  }
-  .bg-\[url\(\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/frontend\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/frontend/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(\/frontend_mentor_challenges\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(/frontend_mentor_challenges/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
-  }
-  .bg-\[url\(assets\/destination\/background-destination-desktop\.jpg\)\] {
-    background-image: url(assets/destination/background-destination-desktop.jpg);
-  }
-  .bg-\[url\(assets\/destination\/background-destination-mobile\.jpg\)\] {
-    background-image: url(assets/destination/background-destination-mobile.jpg);
-  }
   .bg-\[url\(assets\/home\/background-home-mobile\.jpg\)\] {
     background-image: url(assets/home/background-home-mobile.jpg);
   }
-  .bg-\[url\(front\/05_05_space-tourism-website\/assets\/home\/background-home-mobile\.jpg\)\] {
-    background-image: url(front/05_05_space-tourism-website/assets/home/background-home-mobile.jpg);
+  .from-\[\#0d0f1c\] {
+    --tw-gradient-from: #0d0f1c;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .bg-\[url\(src\/assets\/destination\/background-destination-mobile\.jpg\)\] {
-    background-image: url(src/assets/destination/background-destination-mobile.jpg);
+  .from-black\/70 {
+    --tw-gradient-from: color-mix(in srgb, #000 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--color-black) 70%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-transparent {
+    --tw-gradient-to: transparent;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .bg-cover {
     background-size: cover;
@@ -450,11 +454,20 @@
   .bg-center {
     background-position: center;
   }
+  .object-contain {
+    object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
@@ -462,11 +475,20 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
   }
   .pl-7 {
     padding-left: calc(var(--spacing) * 7);
@@ -482,6 +504,10 @@
   }
   .font-bellefair {
     font-family: var(--font-bellefair);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -539,6 +565,14 @@
     --tw-tracking: 15%;
     letter-spacing: 15%;
   }
+  .tracking-\[45\%\] {
+    --tw-tracking: 45%;
+    letter-spacing: 45%;
+  }
+  .tracking-normal {
+    --tw-tracking: var(--tracking-normal);
+    letter-spacing: var(--tracking-normal);
+  }
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
@@ -561,8 +595,20 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-1 {
+    opacity: 1%;
+  }
+  .opacity-15 {
+    opacity: 15%;
+  }
+  .opacity-20 {
+    opacity: 20%;
+  }
   .opacity-25 {
     opacity: 25%;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -573,10 +619,6 @@
   }
   .backdrop-blur-lg {
     --tw-backdrop-blur: blur(var(--blur-lg));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -616,39 +658,21 @@
       }
     }
   }
+  .hover\:opacity-100 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 100%;
+      }
+    }
+  }
+  .md\:bg-\[url\(\.\/assets\/crew\/background-crew-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+  }
   .md\:bg-\[url\(\.\/assets\/destination\/background-destination-tablet\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(./assets/destination/background-destination-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(\.\/assets\/home\/background-home-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(./assets/home/background-home-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(\.\/src\/assets\/home\/background-home-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(./src/assets/home/background-home-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(/05_05_space-tourism-website/assets/home/background-home-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(\/assets\/destination\/background-destination-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(/assets/destination/background-destination-tablet.jpg);
-    }
-  }
-  .md\:bg-\[url\(assets\/destination\/background-destination-tablet\.jpg\)\] {
-    @media (width >= 48rem) {
-      background-image: url(assets/destination/background-destination-tablet.jpg);
     }
   }
   .md\:bg-\[url\(assets\/home\/background-home-tablet\.jpg\)\] {
@@ -656,39 +680,14 @@
       background-image: url(assets/home/background-home-tablet.jpg);
     }
   }
+  .lg\:bg-\[url\(\.\/assets\/crew\/background-crew-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+  }
   .lg\:bg-\[url\(\.\/assets\/destination\/background-destination-desktop\.jpg\)\] {
     @media (width >= 64rem) {
       background-image: url(./assets/destination/background-destination-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(\.\/assets\/home\/background-home-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(./assets/home/background-home-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(\.\/src\/assets\/home\/background-home-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(./src/assets/home/background-home-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/destination\/background-destination-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(/05_05_space-tourism-website/assets/destination/background-destination-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(\/05_05_space-tourism-website\/assets\/home\/background-home-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(/05_05_space-tourism-website/assets/home/background-home-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(\/assets\/destination\/background-destination-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(/assets/destination/background-destination-desktop.jpg);
-    }
-  }
-  .lg\:bg-\[url\(assets\/destination\/background-destination-desktop\.jpg\)\] {
-    @media (width >= 64rem) {
-      background-image: url(assets/destination/background-destination-desktop.jpg);
     }
   }
   .lg\:bg-\[url\(assets\/home\/background-home-desktop\.jpg\)\] {
@@ -741,6 +740,48 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 @property --tw-leading {
   syntax: "*";
@@ -815,6 +856,15 @@
       --tw-skew-x: skewX(0);
       --tw-skew-y: skewY(0);
       --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
