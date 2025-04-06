@@ -4,16 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../assests/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon-32x32.png"
+    />
     <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Crew</title>
   </head>
-  <body>
-    00 Home 01 Destination 02 Crew 03 Technology 02 Meet your crew Commander Douglas Hurley Douglas Gerald
-    Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into
-    space for the third time as commander of Crew Dragon Demo-2.
-
+  <body
+    class="bg-[url(./assets/crew/background-crew-mobile.jpg)] md:bg-[url(./assets/crew/background-crew-tablet.jpg)] lg:bg-[url(./assets/crew/background-crew-desktop.jpg)] bg-cover bg-center bg-fixed p-6 h-screen overflow-hidden"
+  >
+    <div class="p-6">
+      <div
+        class="text-white text-center font-barlow-condensed text-base tracking-[15%] flex flex-row gap-5 justify-center items-center pb-6"
+      >
+        <p class="opacity-25 font-bold">02</p>
+        <p class="tracking-[15%]">MEET YOUR CREW</p>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-14">
+        <div class="relative flex flex-col pt-10 pb-8 text-center">
+          <h2
+            class="font-bellefair text-lg text-white opacity-50 leading-normal crew-role"
+          >
+            COMMAANDER
+          </h2>
+          <h1
+            class="font-bellefair text-2xl text-white leading-normal crew-title"
+          >
+            DOUGLAS HURLEY
+          </h1>
+          <p
+            class="font-barlow text-base text-secondary leading-[180%] tracking-normal mt-6 crew-description mb-2 h-[160px]"
+          >
+            Douglas Gerald Hurley is an American engineer, former Marine Corps
+            pilot and former NASA astronaut. He launched into space for the
+            third time as commander of Crew Dragon Demo-2
+          </p>
+          <div class="absolute flex flex-row gap-6 self-center bottom-0">
+            <div
+              class="nav-item rounded-full bg-white h-[10px] w-[10px] cursor-pointer opacity-20 hover:opacity-100"
+              data-index="0"
+            ></div>
+            <div
+              class="nav-item rounded-full bg-white h-[10px] w-[10px] cursor-pointer opacity-20 hover:opacity-100"
+              data-index="1"
+            ></div>
+            <div
+              class="nav-item rounded-full bg-white h-[10px] w-[10px] cursor-pointer opacity-20 hover:opacity-100"
+              data-index="2"
+            ></div>
+            <div
+              class="nav-item rounded-full bg-white h-[10px] w-[10px] cursor-pointer opacity-20 hover:opacity-100"
+              data-index="3"
+            ></div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            id="crew-image"
+            src="./src/assets/crew/image-douglas-hurley.png"
+            alt=""
+            class="h-full w-full object-cover transition-opacity duration-300"
+          />
+          <div
+            class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0d0f1c] to-transparent"
+          ></div>
+        </div>
+      </div>
+    </div>
     <script src="./js/main.js" defer></script>
+    <script src="./js/crew.js"></script>
   </body>
 </html>
