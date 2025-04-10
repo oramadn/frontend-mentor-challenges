@@ -2,6 +2,7 @@
 
 This repository contains my solutions to various Frontend Mentor challenges. Each project is organized in its
 own folder.
+- Live link: https://oramadn.github.io/frontend-mentor-challenges/
 
 ## Notes
 
