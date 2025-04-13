@@ -4,17 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../assests/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/favicon-32x32.png"
+    />
     <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>Frontend Mentor | Space tourism website</title>
+    <title>Technology</title>
   </head>
-  <body>
-    00 Home 01 Destination 02 Crew 03 Technology 03 Space launch 101 1 2 3 The terminology... Launch vehicle A
-    launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's
-    surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in
-    operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+  <body
+    class="bg-[url(./assets/technology/background-technology-desktop.jpg)] md:bg-[url(./assets/technology/background-technology-tablet.jpg)] lg:bg-[url(./assets/technology/background-technology-mobile.jpg)] bg-cover bg-center bg-fixed p-6 h-screen overflow-hidden"
+  >
+    <div class="p-6">
+      <div
+        class="text-white text-center font-barlow-condensed text-base tracking-[15%] flex flex-row gap-5 justify-center items-center pb-6"
+      >
+        <p class="opacity-25 font-bold">03</p>
+        <p class="tracking-[15%]">SPACE LAUNCH 101</p>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <div class="-mx-12 pt-16">
+          <img
+            id="tech-image"
+            src="./src/assets/technology/image-launch-vehicle-portrait.jpg"
+            alt="Image of Launch Vehicle"
+            class="h-[258px] w-screen object-cover object-[center_80%] transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="flex flex-row gap-4 text-center pt-8 font-bellefair text-lg"
+          id="tech-navigation"
+        >
+          <div
+            class="tech-nav-item rounded-full border-[#504f59] border-1 h-10 w-10 flex items-center justify-center cursor-pointer"
+            data-index="0"
+          >
+            1
+          </div>
+          <div
+            class="tech-nav-item rounded-full border-[#504f59] border-1 h-10 w-10 flex items-center justify-center cursor-pointer"
+            data-index="1"
+          >
+            2
+          </div>
+          <div
+            class="tech-nav-item rounded-full border-[#504f59] border-1 h-10 w-10 flex items-center justify-center cursor-pointer"
+            data-index="2"
+          >
+            3
+          </div>
+        </div>
+        <h2
+          class="font-bellefair text-lg text-white opacity-50 leading-normal mt-10 text-center"
+        >
+          THE TERMINOLOGY...
+        </h2>
+        <h1
+          class="font-bellefair text-2xl text-white leading-normal tech-title text-center transition-opacity duration-300"
+        >
+          LAUNCH VEHICLE
+        </h1>
+        <p
+          class="font-barlow text-[15px] text-secondary leading-[180%] tracking-normal mt-6 tech-description mb-2 h-[160px] text-center transition-opacity duration-300"
+        >
+          A launch vehicle or carrier rocket is a rocket-propelled vehicle used
+          to carry a payload from Earth's surface to space, usually to Earth
+          orbit or beyond. Our WEB-X carrier rocket is the most powerful in
+          operation. Standing 150 metres tall, it's quite an awe-inspiring sight
+          on the launch pad!
+        </p>
+      </div>
+    </div>
 
     <script src="./js/main.js" defer></script>
+    <script src="./js/technology.js" defer></script>
   </body>
 </html>
