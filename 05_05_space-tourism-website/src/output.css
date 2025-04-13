@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-900: #0b0d17;
     --color-black: #000;
     --color-white: #fff;
@@ -200,14 +199,8 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .right-100 {
-    right: calc(var(--spacing) * 100);
-  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
-  }
-  .bottom-10 {
-    bottom: calc(var(--spacing) * 10);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -220,6 +213,12 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .-mx-6 {
+    margin-inline: calc(var(--spacing) * -6);
+  }
+  .-mx-12 {
+    margin-inline: calc(var(--spacing) * -12);
   }
   .mx-23 {
     margin-inline: calc(var(--spacing) * 23);
@@ -242,17 +241,11 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .mb-16 {
-    margin-bottom: calc(var(--spacing) * 16);
   }
   .contents {
     display: contents;
@@ -266,14 +259,17 @@
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-20 {
     height: calc(var(--spacing) * 20);
+  }
+  .h-\[2\] {
+    height: 2;
   }
   .h-\[10px\] {
     height: 10px;
@@ -284,11 +280,17 @@
   .h-\[160px\] {
     height: 160px;
   }
+  .h-\[258px\] {
+    height: 258px;
+  }
   .h-\[288px\] {
     height: 288px;
   }
-  .h-\[340px\] {
-    height: 340px;
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[358px\] {
+    height: 358px;
   }
   .h-full {
     height: 100%;
@@ -298,9 +300,6 @@
   }
   .min-h-\[135px\] {
     min-height: 135px;
-  }
-  .min-h-screen {
-    min-height: 100vh;
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -326,14 +325,17 @@
   .w-\[288px\] {
     width: 288px;
   }
+  .w-\[327px\] {
+    width: 327px;
+  }
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-\[327px\] {
     max-width: 327px;
-  }
-  .flex-grow {
-    flex-grow: 1;
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -346,6 +348,18 @@
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .scale-50 {
+    --tw-scale-x: 50%;
+    --tw-scale-y: 50%;
+    --tw-scale-z: 50%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-90 {
+    --tw-scale-x: 90%;
+    --tw-scale-y: 90%;
+    --tw-scale-z: 90%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -362,6 +376,9 @@
   .flex-row-reverse {
     flex-direction: row-reverse;
   }
+  .content-between {
+    align-content: space-between;
+  }
   .items-center {
     align-items: center;
   }
@@ -370,6 +387,12 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -383,17 +406,11 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
   .gap-14 {
     gap: calc(var(--spacing) * 14);
-  }
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
   }
   .self-center {
     align-self: center;
@@ -401,12 +418,30 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
   }
   .border-t-1 {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
+  }
+  .border-\[\#504f59\] {
+    border-color: #504f59;
   }
   .border-\[\#53535C\] {
     border-color: #53535C;
@@ -427,18 +462,14 @@
   .bg-\[url\(\.\/assets\/destination\/background-destination-mobile\.jpg\)\] {
     background-image: url(./assets/destination/background-destination-mobile.jpg);
   }
+  .bg-\[url\(\.\/assets\/technology\/background-technology-desktop\.jpg\)\] {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
   .bg-\[url\(assets\/home\/background-home-mobile\.jpg\)\] {
     background-image: url(assets/home/background-home-mobile.jpg);
   }
   .from-\[\#0d0f1c\] {
     --tw-gradient-from: #0d0f1c;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-black\/70 {
-    --tw-gradient-from: color-mix(in srgb, #000 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-from: color-mix(in oklab, var(--color-black) 70%, transparent);
-    }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-transparent {
@@ -460,14 +491,47 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[center-40\%\] {
+    object-position: center-40%;
+  }
+  .object-\[center-90\%\] {
+    object-position: center-90%;
+  }
+  .object-\[center_10\%\] {
+    object-position: center 10%;
+  }
+  .object-\[center_20\%\] {
+    object-position: center 20%;
+  }
+  .object-\[center_30\%\] {
+    object-position: center 30%;
+  }
+  .object-\[center_40\%\] {
+    object-position: center 40%;
+  }
+  .object-\[center_70\%\] {
+    object-position: center 70%;
+  }
+  .object-\[center_80\%\] {
+    object-position: center 80%;
+  }
+  .object-\[center_90\%\] {
+    object-position: center 90%;
+  }
+  .object-bottom {
+    object-position: bottom;
+  }
+  .object-center {
+    object-position: center;
+  }
+  .object-top {
+    object-position: top;
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
-  }
-  .py-16 {
-    padding-block: calc(var(--spacing) * 16);
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
@@ -565,10 +629,6 @@
     --tw-tracking: 15%;
     letter-spacing: 15%;
   }
-  .tracking-\[45\%\] {
-    --tw-tracking: 45%;
-    letter-spacing: 45%;
-  }
   .tracking-normal {
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
@@ -576,6 +636,12 @@
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
+  }
+  .text-\[15ps\] {
+    color: 15ps;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-blue-900 {
     color: var(--color-blue-900);
@@ -594,12 +660,6 @@
   }
   .opacity-0 {
     opacity: 0%;
-  }
-  .opacity-1 {
-    opacity: 1%;
-  }
-  .opacity-15 {
-    opacity: 15%;
   }
   .opacity-20 {
     opacity: 20%;
@@ -621,6 +681,11 @@
     --tw-backdrop-blur: blur(var(--blur-lg));
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-all {
     transition-property: all;
@@ -665,6 +730,16 @@
       }
     }
   }
+  .md\:h-\[450px\] {
+    @media (width >= 48rem) {
+      height: 450px;
+    }
+  }
+  .md\:w-\[450px\] {
+    @media (width >= 48rem) {
+      width: 450px;
+    }
+  }
   .md\:bg-\[url\(\.\/assets\/crew\/background-crew-tablet\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(./assets/crew/background-crew-tablet.jpg);
@@ -675,9 +750,24 @@
       background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
   }
+  .md\:bg-\[url\(\.\/assets\/technology\/background-technology-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+  }
   .md\:bg-\[url\(assets\/home\/background-home-tablet\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(assets/home/background-home-tablet.jpg);
+    }
+  }
+  .lg\:h-\[600px\] {
+    @media (width >= 64rem) {
+      height: 600px;
+    }
+  }
+  .lg\:w-\[600px\] {
+    @media (width >= 64rem) {
+      width: 600px;
     }
   }
   .lg\:bg-\[url\(\.\/assets\/crew\/background-crew-desktop\.jpg\)\] {
@@ -688,6 +778,11 @@
   .lg\:bg-\[url\(\.\/assets\/destination\/background-destination-desktop\.jpg\)\] {
     @media (width >= 64rem) {
       background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+  }
+  .lg\:bg-\[url\(\.\/assets\/technology\/background-technology-mobile\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(./assets/technology/background-technology-mobile.jpg);
     }
   }
   .lg\:bg-\[url\(assets\/home\/background-home-desktop\.jpg\)\] {
@@ -710,6 +805,21 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -850,6 +960,9 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: rotateX(0);
       --tw-rotate-y: rotateY(0);
       --tw-rotate-z: rotateZ(0);
