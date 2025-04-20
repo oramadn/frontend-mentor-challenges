@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./starter-code/data.json") // Make sure this path is correct relative to technology.html
+  fetch("./starter-code/data.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -41,14 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
           titleElement.textContent = item.name.toUpperCase();
           descriptionElement.textContent = item.description;
 
-          // *** CORRECTED PATH REPLACEMENT LOGIC ***
-          // Use the correct source path "../assests/" (double 's') from data.json
-          // Assume the target structure is "./src/assets/" relative to the HTML file. Adjust if necessary.
           const imagePath = item.images.portrait.replace(
-            "../assests/", // <-- Fixed: Match the double 's' in data.json
-            "./src/assets/" // <-- Target path relative to HTML (adjust if your folder structure is different)
+            "../assests/",
+            "./src/assets/"
           );
-          // *** END CORRECTION ***
 
           console.log("Attempting to load image:", imagePath); // Add for debugging
 
