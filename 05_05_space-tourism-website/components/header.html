@@ -1,6 +1,9 @@
 <header class="flex flex-row pb-6 justify-between items-center">
   <a href="./index.html"
-    ><img src="./src/assets/shared/logo.svg" alt="Logo" class="w-10"
+    ><img
+      src="./src/assets/shared/logo.svg"
+      alt="Logo"
+      class="w-10 md:w-12 md:ml-6"
   /></a>
   <nav class="md:hidden">
     <img
@@ -11,18 +14,44 @@
     />
   </nav>
 
-  <nav class="hidden md:flex md:flex-row md:items-center md:gap-7 md:bg-transparent md:backdrop-blur-lg md:py-6 md:px-10 lg:w-1/2">
-    <a href="./index.html" class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer">
+  <nav
+    class="hidden md:flex md:flex-end md:items-center md:gap-7 md:py-6 md:pr-6 lg:w-1/2"
+  >
+    <a
+      href="./index.html"
+      class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer relative group"
+    >
       <span class="font-bold tracking-[2.7px]">00</span> HOME
+      <span
+        class="absolute -bottom-6 left-0 w-0 h-0.5 bg-white opacity-100 transition-all duration-300 group-hover:w-full"
+      ></span>
     </a>
-    <a href="./destination.html" class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer">
+    <a
+      href="./destination.html"
+      class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer relative group"
+    >
       <span class="font-bold tracking-[2.7px]">01</span> DESTINATION
+      <span
+        class="absolute -bottom-6 left-0 w-0 h-0.5 bg-white opacity-100 transition-all duration-300 group-hover:w-full"
+      ></span>
     </a>
-    <a href="./crew.html" class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer">
+    <a
+      href="./crew.html"
+      class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer relative group"
+    >
       <span class="font-bold tracking-[2.7px]">02</span> CREW
+      <span
+        class="absolute -bottom-6 left-0 w-0 h-0.5 bg-white opacity-100 transition-all duration-300 group-hover:w-full"
+      ></span>
     </a>
-    <a href="./technology.html" class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer">
+    <a
+      href="./technology.html"
+      class="text-white font-barlow-condensed text-base leading-normal tracking-[2px] cursor-pointer relative group"
+    >
       <span class="font-bold tracking-[2.7px]">03</span> TECHNOLOGY
+      <span
+        class="absolute -bottom-6 left-0 w-0 h-0.5 bg-white opacity-100 transition-all duration-300 group-hover:w-full"
+      ></span>
     </a>
   </nav>
 </header>
